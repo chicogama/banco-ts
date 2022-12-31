@@ -1,0 +1,17 @@
+{
+  "name": "banco-tsc",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Aplicação bancária em typescript",
+  "main": "app1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "watch": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
