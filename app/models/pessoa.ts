@@ -1,7 +1,16 @@
 export class Pessoa {
 
+    private _cpf: String;
     private _nome: String;
-    private _nascimento: Date;
+    private _telefone: String;
+
+
+    public get cpf(): String {
+        return this._cpf;
+    }
+    public set cpf(value: String) {
+        this._cpf = value;
+    }
 
     public get nome(): String {
         return this._nome;
@@ -10,10 +19,11 @@ export class Pessoa {
         this._nome = value;
     }
 
-    public get nascimento(): Date {
-        return this._nascimento;
+    public get telefone(): String {
+        return this._telefone;
     }
-    public set nascimento(value: Date) {
-        this._nascimento = value;
+
+    public set telefone(value: String) {
+        this._telefone = value;
     }
 }

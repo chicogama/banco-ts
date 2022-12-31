@@ -1,14 +1,20 @@
 export class Pessoa {
+    get cpf() {
+        return this._cpf;
+    }
+    set cpf(value) {
+        this._cpf = value;
+    }
     get nome() {
         return this._nome;
     }
     set nome(value) {
         this._nome = value;
     }
-    get nascimento() {
-        return this._nascimento;
+    get telefone() {
+        return this._telefone;
     }
-    set nascimento(value) {
-        this._nascimento = value;
+    set telefone(value) {
+        this._telefone = value;
     }
 }
