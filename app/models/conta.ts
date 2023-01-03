@@ -1,6 +1,10 @@
 export class Conta {
-
     private _numero: Number;
+
+    constructor(numero: Number) {
+        this._numero = numero;
+    }
+
     public get numero(): Number {
         return this._numero;
     }
@@ -9,4 +13,3 @@ export class Conta {
         this._numero = value;
     }
 }
-

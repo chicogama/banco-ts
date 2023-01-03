@@ -1,4 +1,7 @@
 export class Conta {
+    constructor(numero) {
+        this._numero = numero;
+    }
     get numero() {
         return this._numero;
     }

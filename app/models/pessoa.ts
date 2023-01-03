@@ -1,9 +1,13 @@
 export class Pessoa {
-
     private _cpf: String;
     private _nome: String;
     private _telefone: String;
 
+    constructor(cpf: String, nome: String, telefone: String) {
+        this._cpf = cpf;
+        this._nome = nome;
+        this._telefone = telefone;
+    }
 
     public get cpf(): String {
         return this._cpf;
