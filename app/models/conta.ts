@@ -1,5 +1,6 @@
 export class Conta {
     private _numero: Number;
+    private _dataCriação: Date;
 
     constructor(numero: Number) {
         this._numero = numero;
