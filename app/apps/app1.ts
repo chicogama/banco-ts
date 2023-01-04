@@ -1,7 +1,25 @@
-import { Pessoa } from "../models/pessoa.js";
-import { Conta } from "../models/conta.js";
+import { Cargo } from "../models/cargo.js";
+import { Funcionario } from "../models/class/funcionario.js";
 
 export function app1() {
-    const pessoa = new Pessoa("00122200022", "Josemar Gama", "991277292");
-    console.log(pessoa.nome);
+    const chico = new Funcionario(
+        "12332112332",
+        "ChicoGama",
+        "1233131231",
+        new Cargo("Gerente"),
+        2000
+    );
+
+    const francisco = new Funcionario(
+        "4569873412",
+        "Francisco",
+        "9119299922",
+        new Cargo("Atendete"),
+        5000
+    );
+
+    chico.funcionarioCargo(new Cargo("CEO"));
+    francisco.funcionarioCargo(new Cargo("Vendedor"));
+    console.log(chico);
+    console.log(francisco);
 }
