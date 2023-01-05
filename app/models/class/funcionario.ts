@@ -1,7 +1,8 @@
+import { IUsuario } from "../IUsuario";
 import { Cargo } from "../cargo.js";
 import { Pessoa } from "../pessoa.js";
 
-export class Funcionario extends Pessoa {
+export class Funcionario extends Pessoa implements IUsuario {
     private _salario: Number;
     private _cargos: Array<Cargo>;
 
@@ -28,5 +29,9 @@ export class Funcionario extends Pessoa {
 
     public funcionarioCargo(cargo: Cargo) {
         this._cargos.push(cargo);
+    }
+
+    autenticar(): boolean {
+        return true;
     }
 }

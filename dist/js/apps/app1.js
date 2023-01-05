@@ -5,6 +5,8 @@ export function app1() {
     const francisco = new Funcionario("4569873412", "Francisco", "9119299922", new Cargo("Atendete"), 5000);
     chico.funcionarioCargo(new Cargo("CEO"));
     francisco.funcionarioCargo(new Cargo("Vendedor"));
+    console.log("Autenticado?: " + chico.autenticar());
     console.log(chico);
+    console.log("Autenticado?: " + francisco.autenticar());
     console.log(francisco);
 }

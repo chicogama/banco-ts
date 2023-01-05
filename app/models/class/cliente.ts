@@ -1,7 +1,43 @@
-import { Endereco } from "../endereco";
-import { Pessoa } from "../pessoa";
+import { IUsuario } from "../IUsuario.js";
+import { Endereco } from "../endereco.js";
+import { Pessoa } from "../pessoa.js";
 
-export class Cliente extends Pessoa {
-    private _endereco: Endereco;
+export class Cliente extends Pessoa implements IUsuario {
+    private _endereco: Array<Endereco>;
     private _vip: Boolean;
+
+    constructor(
+        cpf: string,
+        nome: string,
+        telefone: string,
+        vip: Boolean,
+        endereco: Endereco
+    ) {
+        super(cpf, nome, telefone);
+        this._vip = vip;
+        this._endereco = [];
+        this._endereco.push(endereco);
+    }
+
+    public get vip() {
+        return this._vip;
+    }
+
+    public set vip(value) {
+        this._vip = value;
+    }
+
+    public adicinaEndereco(endereco: Endereco) {
+        this._endereco.push(endereco);
+    }
+
+    public listarEndereço() {
+        this._endereco.forEach((element) => {
+            console.log(element);
+        });
+    }
+
+    autenticar(): boolean {
+        return true;
+    }
 }

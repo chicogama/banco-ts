@@ -15,4 +15,7 @@ export class Funcionario extends Pessoa {
     funcionarioCargo(cargo) {
         this._cargos.push(cargo);
     }
+    autenticar() {
+        return true;
+    }
 }

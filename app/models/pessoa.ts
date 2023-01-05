@@ -1,4 +1,4 @@
-export class Pessoa {
+export abstract class Pessoa {
     private _cpf: String;
     private _nome: String;
     private _telefone: String;

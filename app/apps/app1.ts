@@ -20,6 +20,9 @@ export function app1() {
 
     chico.funcionarioCargo(new Cargo("CEO"));
     francisco.funcionarioCargo(new Cargo("Vendedor"));
+
+    console.log("Autenticado?: " + chico.autenticar());
     console.log(chico);
+    console.log("Autenticado?: " + francisco.autenticar());
     console.log(francisco);
 }
