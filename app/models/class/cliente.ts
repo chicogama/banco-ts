@@ -27,11 +27,11 @@ export class Cliente extends Pessoa implements IUsuario {
         this._vip = value;
     }
 
-    public adicinaEndereco(endereco: Endereco) {
+    public adicinaEndereco(endereco: Endereco): void {
         this._endereco.push(endereco);
     }
 
-    public listarEndereço() {
+    public listarEndereço(): void {
         this._endereco.forEach((element) => {
             console.log(element);
         });

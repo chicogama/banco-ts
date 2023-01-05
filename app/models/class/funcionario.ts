@@ -27,7 +27,7 @@ export class Funcionario extends Pessoa implements IUsuario {
         this._salario = value;
     }
 
-    public funcionarioCargo(cargo: Cargo) {
+    public funcionarioCargo(cargo: Cargo): void {
         this._cargos.push(cargo);
     }
 
