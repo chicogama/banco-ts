@@ -5,11 +5,11 @@ export class Cargo {
         this._nome = nome;
     }
 
-    public get nome() {
+    public get nome(): String {
         return this._nome;
     }
 
-    public set nome(value) {
+    public set nome(value: String) {
         this._nome = value;
     }
 }

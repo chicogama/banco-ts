@@ -19,11 +19,11 @@ export class Funcionario extends Pessoa implements IUsuario {
         this._salario = salario;
     }
 
-    public get salario() {
+    public get salario(): Number {
         return this._salario;
     }
 
-    public set salario(value) {
+    public set salario(value: Number) {
         this._salario = value;
     }
 

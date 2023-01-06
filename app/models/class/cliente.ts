@@ -19,11 +19,11 @@ export class Cliente extends Pessoa implements IUsuario {
         this._endereco.push(endereco);
     }
 
-    public get vip() {
+    public get vip(): Boolean {
         return this._vip;
     }
 
-    public set vip(value) {
+    public set vip(value: Boolean) {
         this._vip = value;
     }
 
