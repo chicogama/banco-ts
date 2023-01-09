@@ -5,7 +5,6 @@ import { Credito } from "../models/credito.js";
 import { Debito } from "../models/debito.js";
 
 export function app5() {
-    console.log("Olá!");
     const clientePoupanca = new Cliente(
         "44509876411",
         "Josemar Gama",
@@ -72,4 +71,6 @@ export function app5() {
             " Seu saldo é de R$: " +
             clientePoupanca.contaPoupanca.calcularSaldo()
     );
+
+    console.log(clientePoupanca.contaPoupanca.rendimentoConta());
 }

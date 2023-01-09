@@ -4,7 +4,6 @@ import { ContaPoupanca } from "../models/class/contapoupanca.js";
 import { Credito } from "../models/credito.js";
 import { Debito } from "../models/debito.js";
 export function app5() {
-    console.log("Olá!");
     const clientePoupanca = new Cliente("44509876411", "Josemar Gama", "96991277292", true, new Endereco("68900000", "Av. São José", "123", "N/A", "Santana", "Amapá"));
     clientePoupanca.contaPoupanca = new ContaPoupanca("002", "111", 0.01);
     clientePoupanca.contaPoupanca.depositar(new Credito(200, new Date("2022,01,01")));
@@ -25,4 +24,5 @@ export function app5() {
         clientePoupanca.nome +
         " Seu saldo é de R$: " +
         clientePoupanca.contaPoupanca.calcularSaldo());
+    console.log(clientePoupanca.contaPoupanca.rendimentoConta());
 }

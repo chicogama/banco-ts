@@ -36,9 +36,12 @@ export class ContaPoupanca extends Conta {
     }
 
     public rendimentoConta() {
-        var data: String;
-        this.debito.forEach((Object) => {
-            data = toString(Object.data.getMonth);
+        var mes: number;
+        this.credito.forEach((Object) => {
+            mes = Object.data.getMonth();
+            if (mes == 3) {
+                console.log(Object.valor);
+            }
         });
     }
 }
