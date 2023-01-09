@@ -36,12 +36,18 @@ export class ContaPoupanca extends Conta {
     }
 
     public rendimentoConta() {
-        var mes: number;
+        var saldoMes: number = 0;
+        var creditosMes: number = 0;
+        var debitosMes: number = 0;
+        var rendimentosMes: number = 0;
+
         this.credito.forEach((Object) => {
-            mes = Object.data.getMonth();
-            if (mes == 3) {
-                console.log(Object.valor);
-            }
+            if (Object.data.getMonth() == Object.data.getMonth())
+                creditosMes += Object.valor;
+            console.log(creditosMes);
+        });
+        this.debito.forEach((Object) => {
+            console.log(Object.data);
         });
     }
 }
