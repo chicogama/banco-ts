@@ -74,8 +74,7 @@ export function app5() {
         "Cliente " +
             clientePoupanca.nome +
             " Seu saldo é de R$: " +
-            clientePoupanca.contaPoupanca.calcularSaldo()
+            clientePoupanca.contaPoupanca.calcularSaldo() +
+            clientePoupanca.contaPoupanca.rendimentoConta()
     );
-
-    console.log(clientePoupanca.contaPoupanca.rendimentoConta());
 }

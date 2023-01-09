@@ -36,18 +36,19 @@ export class ContaPoupanca extends Conta {
     }
 
     public rendimentoConta() {
-        var saldoMes: number = 0;
-        var creditosMes: number = 0;
-        var debitosMes: number = 0;
-        var rendimentosMes: number = 0;
+        var rendimentos: number = 0;
+        var creditos: number = 0;
+        var debitos: number = 0;
 
         this.credito.forEach((Object) => {
-            if (Object.data.getMonth() == Object.data.getMonth())
-                creditosMes += Object.valor;
-            console.log(creditosMes);
+            creditos = (creditos + Object.valor) * this.rentabilidade;
         });
+
         this.debito.forEach((Object) => {
-            console.log(Object.data);
+            debitos = (debitos + Object.valor) * this.rentabilidade;
         });
+
+        rendimentos = creditos - debitos;
+        return rendimentos;
     }
 }
