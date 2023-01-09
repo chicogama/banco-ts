@@ -4,14 +4,14 @@ import { Debito } from "./debito.js";
 export abstract class Conta {
     private _agencia: String;
     private _numero: String;
-    private _debito: Array<Debito>;
-    private _credito: Array<Credito>;
+    public debito: Array<Debito>;
+    public credito: Array<Credito>;
 
     constructor(agencia: String, numero: String) {
-        this.agencia = agencia;
+        this._agencia = agencia;
         this._numero = numero;
-        this._debito = [];
-        this._credito = [];
+        this.debito = [];
+        this.credito = [];
     }
 
     public get agencia(): String {
@@ -30,5 +30,11 @@ export abstract class Conta {
         this._numero = value;
     }
 
-    public depositar(valor: Number) {}
+    public depositar(valor: Credito) {
+        this.credito.push(valor);
+    }
+
+    public sacar(valor: Debito) {
+        this.debito.push(valor);
+    }
 }

@@ -3,7 +3,7 @@ import { Cargo } from "../cargo.js";
 import { Pessoa } from "../pessoa.js";
 
 export class Funcionario extends Pessoa implements IUsuario {
-    private _salario: Number;
+    private _salario: number;
     private _cargos: Array<Cargo>;
 
     constructor(
@@ -11,7 +11,7 @@ export class Funcionario extends Pessoa implements IUsuario {
         nome: String,
         telefone: String,
         cargo: Cargo,
-        salario: Number
+        salario: number
     ) {
         super(cpf, nome, telefone);
         this._cargos = [];
@@ -19,11 +19,11 @@ export class Funcionario extends Pessoa implements IUsuario {
         this._salario = salario;
     }
 
-    public get salario(): Number {
+    public get salario(): number {
         return this._salario;
     }
 
-    public set salario(value: Number) {
+    public set salario(value: number) {
         this._salario = value;
     }
 

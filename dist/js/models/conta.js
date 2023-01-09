@@ -1,9 +1,9 @@
 export class Conta {
     constructor(agencia, numero) {
-        this.agencia = agencia;
+        this._agencia = agencia;
         this._numero = numero;
-        this._debito = [];
-        this._credito = [];
+        this.debito = [];
+        this.credito = [];
     }
     get agencia() {
         return this._agencia;
@@ -17,5 +17,10 @@ export class Conta {
     set numero(value) {
         this._numero = value;
     }
-    depositar(valor) { }
+    depositar(valor) {
+        this.credito.push(valor);
+    }
+    sacar(valor) {
+        this.debito.push(valor);
+    }
 }

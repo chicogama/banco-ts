@@ -1,10 +1,14 @@
 import { IUsuario } from "../IUsuario.js";
 import { Endereco } from "../endereco.js";
 import { Pessoa } from "../pessoa.js";
+import { ContaCorrente } from "./contacorrente.js";
+import { ContaPoupanca } from "./contapoupanca";
 
 export class Cliente extends Pessoa implements IUsuario {
     private _endereco: Array<Endereco>;
     private _vip: Boolean;
+    public contaCorrente: ContaCorrente;
+    public contaPoupanca: ContaPoupanca;
 
     constructor(
         cpf: string,
