@@ -52,6 +52,11 @@ export class ContaCorrente extends Conta {
             console.log(
                 "O valor requisitado é maior que o limite da conta, operação não realizada!"
             );
+        }
+        if (valor > saldo) {
+            console.log(
+                "O valor informado é maior que o seu saldo atual, operação não realizada!"
+            );
         } else {
             contaDestino.depositar(new Credito(valor, new Date()));
             this.sacar(new Debito(valor, new Date()));

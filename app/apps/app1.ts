@@ -18,8 +18,8 @@ export function app1() {
         5000
     );
 
-    chico.funcionarioCargo(new Cargo("CEO"));
-    francisco.funcionarioCargo(new Cargo("Vendedor"));
+    chico.adicionarCargo(new Cargo("CEO"));
+    francisco.adicionarCargo(new Cargo("Vendedor"));
 
     console.log("Autenticado?: " + chico.autenticar());
     console.log(chico);

@@ -1,5 +1,4 @@
-import { Cliente } from "../models/cliente";
-import { ContaCorrente } from "../models/contacorrente";
+import { Cliente } from "../models/cliente.js";
 import { Endereco } from "../models/pessoa/endereco.js";
 
 export function app2() {
@@ -21,7 +20,7 @@ export function app2() {
     console.log("Cliente: " + cliente.nome);
     console.log("Autenticado?: " + cliente.autenticar());
 
-    cliente.adicinaEndereco(
+    cliente.adicionarEndereco(
         new Endereco(
             "68900000",
             "Av. São José",
@@ -31,7 +30,7 @@ export function app2() {
             "Amapá"
         )
     );
-    cliente.adicinaEndereco(
+    cliente.adicionarEndereco(
         new Endereco(
             "68900222",
             "Av. Fab",

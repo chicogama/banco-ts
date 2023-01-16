@@ -1,8 +1,8 @@
-import { ContaCorrente } from "../models/contacorrente";
-import { Credito } from "../models/conta/credito";
+import { ContaCorrente } from "../models/contacorrente.js";
+import { Credito } from "../models/conta/credito.js";
 import { Endereco } from "../models/pessoa/endereco.js";
-import { Cliente } from "../models/cliente";
-import { ContaPoupanca } from "../models/contapoupanca";
+import { Cliente } from "../models/cliente.js";
+import { ContaPoupanca } from "../models/contapoupanca.js";
 
 export function app4() {
     const clienteCorrente = new Cliente(
@@ -20,8 +20,9 @@ export function app4() {
         )
     );
 
-    /*     clienteCorrente.contaCorrente = new ContaCorrente("001", "222", 500);
-    clienteCorrente.contaCorrente.depositar(new Credito(1000, new Date()));
+    const contaCorrente = new ContaCorrente("001", "222", 5000);
+    clienteCorrente.adicionarConta(contaCorrente);
+    contaCorrente.depositar(new Credito(1000, new Date()));
 
     const clientePoupanca = new Cliente(
         "44509876411",
@@ -38,41 +39,37 @@ export function app4() {
         )
     );
 
-    clientePoupanca.contaPoupanca = new ContaPoupanca("002", "111", 0.01);
-    clientePoupanca.contaPoupanca.depositar(
-        new Credito(1000, new Date("1111,11,11"))
-    );
+    const contaPoupanca = new ContaPoupanca("002", "111", 0.01);
+    clientePoupanca.adicionarConta(contaPoupanca);
+    contaPoupanca.depositar(new Credito(1000, new Date("1111,11,11")));
 
     console.log(
         "Cliente " +
             clienteCorrente.nome +
             " Seu saldo é de R$: " +
-            clienteCorrente.contaCorrente.calcularSaldo()
+            contaCorrente.calcularSaldo()
     );
 
     console.log(
         "Cliente " +
             clientePoupanca.nome +
             " Seu saldo é de R$: " +
-            clientePoupanca.contaPoupanca.calcularSaldo()
+            contaPoupanca.calcularSaldo()
     );
 
-    clienteCorrente.contaCorrente.transferir(
-        clientePoupanca.contaPoupanca,
-        500
-    );
+    contaCorrente.transferir(contaPoupanca, 1500);
 
     console.log(
         "Cliente " +
             clienteCorrente.nome +
             " Seu saldo é de R$: " +
-            clienteCorrente.contaCorrente.calcularSaldo()
+            contaCorrente.calcularSaldo()
     );
 
     console.log(
         "Cliente " +
             clientePoupanca.nome +
             " Seu saldo é de R$: " +
-            clientePoupanca.contaPoupanca.calcularSaldo()
-    ); */
+            contaPoupanca.calcularSaldo()
+    );
 }

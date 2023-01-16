@@ -27,7 +27,7 @@ export class ContaPoupanca extends Conta {
         return saldoAtual;
     }
     //Método para calcular rendimento da conta poupança
-    rendimentoConta() {
+    calcularRedimento() {
         var rendimentos = 0;
         var creditos = 0;
         var debitos = 0;

@@ -5,9 +5,9 @@ import { Conta } from "./conta/conta";
 
 //Classe Cliente que herda de Pessoa
 export class Cliente extends Pessoa implements IUsuario {
-    private _endereco: Array<Endereco>;
+    private _enderecos: Array<Endereco>;
     private _vip: Boolean;
-    public conta: Array<Conta>;
+    private _contas: Array<Conta>;
 
     constructor(
         cpf: string,
@@ -18,8 +18,9 @@ export class Cliente extends Pessoa implements IUsuario {
     ) {
         super(cpf, nome, telefone);
         this._vip = vip;
-        this._endereco = [];
-        this._endereco.push(endereco);
+        this._enderecos = [];
+        this._contas = [];
+        this._enderecos.push(endereco);
     }
 
     //Gets e Seters
@@ -32,13 +33,23 @@ export class Cliente extends Pessoa implements IUsuario {
     }
 
     //Método adiciona endereço a uma pessoa
-    public adicinaEndereco(endereco: Endereco): void {
-        this._endereco.push(endereco);
+    public adicionarEndereco(endereco: Endereco): void {
+        this._enderecos.push(endereco);
+    }
+
+    public adicionarConta(conta: Conta) {
+        this._contas.push(conta);
     }
 
     //Método de listar endereços de uma pessoa
     public listarEndereço(): void {
-        this._endereco.forEach((element) => {
+        this._enderecos.forEach((element) => {
+            console.log(element);
+        });
+    }
+
+    public listarContas() {
+        this._contas.forEach((element) => {
             console.log(element);
         });
     }

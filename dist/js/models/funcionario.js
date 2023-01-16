@@ -14,7 +14,7 @@ export class Funcionario extends Pessoa {
     set salario(value) {
         this._salario = value;
     }
-    funcionarioCargo(cargo) {
+    adicionarCargo(cargo) {
         this._cargos.push(cargo);
     }
     //Interface que verifica se usuário está autenticado

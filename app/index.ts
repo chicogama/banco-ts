@@ -8,4 +8,4 @@ import { app5 } from "./apps/app5.js";
 //app2();
 //app3();
 //app4();
-//app5();
+app5();

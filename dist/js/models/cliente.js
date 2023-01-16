@@ -4,8 +4,9 @@ export class Cliente extends Pessoa {
     constructor(cpf, nome, telefone, vip, endereco) {
         super(cpf, nome, telefone);
         this._vip = vip;
-        this._endereco = [];
-        this._endereco.push(endereco);
+        this._enderecos = [];
+        this._contas = [];
+        this._enderecos.push(endereco);
     }
     //Gets e Seters
     get vip() {
@@ -15,12 +16,20 @@ export class Cliente extends Pessoa {
         this._vip = value;
     }
     //Método adiciona endereço a uma pessoa
-    adicinaEndereco(endereco) {
-        this._endereco.push(endereco);
+    adicionarEndereco(endereco) {
+        this._enderecos.push(endereco);
+    }
+    adicionarConta(conta) {
+        this._contas.push(conta);
     }
     //Método de listar endereços de uma pessoa
     listarEndereço() {
-        this._endereco.forEach((element) => {
+        this._enderecos.forEach((element) => {
+            console.log(element);
+        });
+    }
+    listarContas() {
+        this._contas.forEach((element) => {
             console.log(element);
         });
     }
