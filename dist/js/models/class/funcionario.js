@@ -1,4 +1,5 @@
 import { Pessoa } from "../pessoa.js";
+//Classe funcionario que herda de pessoa
 export class Funcionario extends Pessoa {
     constructor(cpf, nome, telefone, cargo, salario) {
         super(cpf, nome, telefone);
@@ -6,6 +7,7 @@ export class Funcionario extends Pessoa {
         this._cargos.push(cargo);
         this._salario = salario;
     }
+    //Gets e Seters
     get salario() {
         return this._salario;
     }
@@ -15,6 +17,7 @@ export class Funcionario extends Pessoa {
     funcionarioCargo(cargo) {
         this._cargos.push(cargo);
     }
+    //Interface que verifica se usuário está autenticado
     autenticar() {
         return true;
     }

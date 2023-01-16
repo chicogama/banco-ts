@@ -1,8 +1,10 @@
+//classe de créditos para uma conta
 export class Credito {
     constructor(valor, data) {
         this._valor = valor;
         this._data = data;
     }
+    //Gets e Seters
     get valor() {
         return this._valor;
     }

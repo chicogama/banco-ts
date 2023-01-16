@@ -2,6 +2,7 @@ import { IUsuario } from "../IUsuario";
 import { Cargo } from "../cargo.js";
 import { Pessoa } from "../pessoa.js";
 
+//Classe funcionario que herda de pessoa
 export class Funcionario extends Pessoa implements IUsuario {
     private _salario: number;
     private _cargos: Array<Cargo>;
@@ -19,6 +20,7 @@ export class Funcionario extends Pessoa implements IUsuario {
         this._salario = salario;
     }
 
+    //Gets e Seters
     public get salario(): number {
         return this._salario;
     }
@@ -31,6 +33,7 @@ export class Funcionario extends Pessoa implements IUsuario {
         this._cargos.push(cargo);
     }
 
+    //Interface que verifica se usuário está autenticado
     autenticar(): boolean {
         return true;
     }

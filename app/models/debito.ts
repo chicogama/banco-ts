@@ -1,3 +1,4 @@
+//Classe de debito para uma conta
 export class Debito {
     private _valor: number;
     private _data: Date;
@@ -7,6 +8,7 @@ export class Debito {
         this._data = data;
     }
 
+    //Gets e Seters
     public get valor(): number {
         return this._valor;
     }

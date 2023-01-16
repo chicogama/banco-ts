@@ -1,15 +1,18 @@
+//classe que implementa conta Poupança, herda da classe conta
 import { Conta } from "../conta.js";
 export class ContaPoupanca extends Conta {
     constructor(agencia, numero, rentabilidade) {
         super(agencia, numero);
         this._rentabilidade = rentabilidade;
     }
+    //Gets e Seters
     get rentabilidade() {
         return this._rentabilidade;
     }
     set rentabilidade(value) {
         this._rentabilidade = value;
     }
+    //Método para calcular saldo
     calcularSaldo() {
         var saldoAtual = 0;
         var creditos = 0;
@@ -23,6 +26,7 @@ export class ContaPoupanca extends Conta {
         saldoAtual = creditos - debitos;
         return saldoAtual;
     }
+    //Método para calcular rendimento da conta poupança
     rendimentoConta() {
         var rendimentos = 0;
         var creditos = 0;

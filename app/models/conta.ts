@@ -1,6 +1,7 @@
 import { Credito } from "./credito.js";
 import { Debito } from "./debito.js";
 
+//Classe abstrata de conta
 export abstract class Conta {
     private _agencia: String;
     private _numero: String;
@@ -14,6 +15,7 @@ export abstract class Conta {
         this.credito = [];
     }
 
+    //Gets e Seters
     public get agencia(): String {
         return this._agencia;
     }
@@ -30,10 +32,12 @@ export abstract class Conta {
         this._numero = value;
     }
 
+    //Método depositar
     public depositar(valor: Credito) {
         this.credito.push(valor);
     }
 
+    //Método sacar
     public sacar(valor: Debito) {
         this.debito.push(valor);
     }

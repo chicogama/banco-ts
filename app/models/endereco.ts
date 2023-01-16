@@ -1,3 +1,4 @@
+//Classe de endereço para uma pessoa
 export class Endereco {
     private _cep: String;
     private _logradouro: String;
@@ -22,6 +23,7 @@ export class Endereco {
         this._uf = uf;
     }
 
+    //Gets e Seters
     public get cep(): String {
         return this._cep;
     }

@@ -1,3 +1,4 @@
+//Classe de endereço para uma pessoa
 export class Endereco {
     constructor(cep, logradoro, numero, complemento, cidade, uf) {
         this._cep = cep;
@@ -7,6 +8,7 @@ export class Endereco {
         this._cidade = cidade;
         this._uf = uf;
     }
+    //Gets e Seters
     get cep() {
         return this._cep;
     }

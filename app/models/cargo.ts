@@ -1,3 +1,4 @@
+//classe de cargos de um funcionário
 export class Cargo {
     private _nome: String;
 
@@ -5,6 +6,7 @@ export class Cargo {
         this._nome = nome;
     }
 
+    //Gets e Seters
     public get nome(): String {
         return this._nome;
     }

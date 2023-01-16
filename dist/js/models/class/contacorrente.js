@@ -1,11 +1,13 @@
 import { Conta } from "../conta.js";
 import { Credito } from "../credito.js";
 import { Debito } from "../debito.js";
+//Classe de conta corrente que herda de Conta.
 export class ContaCorrente extends Conta {
     constructor(agencia, numero, limite) {
         super(agencia, numero);
         this._limite = limite;
     }
+    //Gets e Seters
     get limite() {
         return this._limite;
     }
@@ -15,6 +17,7 @@ export class ContaCorrente extends Conta {
     get limte() {
         return this._limite;
     }
+    //Método para calcular saldo
     calcularSaldo() {
         var saldoAtual = 0;
         var creditos = 0;
@@ -28,6 +31,7 @@ export class ContaCorrente extends Conta {
         saldoAtual = creditos - debitos;
         return saldoAtual;
     }
+    //Método para transferir saldo de conta
     transferir(contaDestino, valor) {
         const saldo = this.calcularSaldo();
         if (saldo <= 0) {

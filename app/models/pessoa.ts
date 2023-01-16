@@ -1,3 +1,4 @@
+//classe abstrata Pessoa
 export abstract class Pessoa {
     private _cpf: String;
     private _nome: String;
@@ -9,6 +10,7 @@ export abstract class Pessoa {
         this._telefone = telefone;
     }
 
+    //Gets e Seters
     public get cpf(): String {
         return this._cpf;
     }

@@ -1,3 +1,4 @@
+//Classe abstrata de conta
 export class Conta {
     constructor(agencia, numero) {
         this._agencia = agencia;
@@ -5,6 +6,7 @@ export class Conta {
         this.debito = [];
         this.credito = [];
     }
+    //Gets e Seters
     get agencia() {
         return this._agencia;
     }
@@ -17,9 +19,11 @@ export class Conta {
     set numero(value) {
         this._numero = value;
     }
+    //Método depositar
     depositar(valor) {
         this.credito.push(valor);
     }
+    //Método sacar
     sacar(valor) {
         this.debito.push(valor);
     }
