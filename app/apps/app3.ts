@@ -1,7 +1,7 @@
-import { ContaCorrente } from "../models/class/contacorrente.js";
-import { Credito } from "../models/credito.js";
-import { Endereco } from "../models/endereco.js";
-import { Cliente } from "../models/class/cliente.js";
+import { ContaCorrente } from "../models/contacorrente";
+import { Credito } from "../models/conta/credito";
+import { Endereco } from "../models/pessoa/endereco.js";
+import { Cliente } from "../models/cliente";
 
 export function app3() {
     const clienteCorrente = new Cliente(
@@ -18,7 +18,7 @@ export function app3() {
             "Amapá"
         )
     );
-
+    /* 
     clienteCorrente.contaCorrente = new ContaCorrente("123", "222", 400);
     console.log(clienteCorrente);
 
@@ -31,5 +31,5 @@ export function app3() {
             clienteCorrente.nome +
             " Seu saldo é de R$: " +
             clienteCorrente.contaCorrente.calcularSaldo()
-    );
+    ); */
 }

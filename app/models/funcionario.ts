@@ -1,6 +1,6 @@
-import { IUsuario } from "../IUsuario";
-import { Cargo } from "../cargo.js";
-import { Pessoa } from "../pessoa.js";
+import { IUsuario } from "./pessoa/IUsuario.js";
+import { Cargo } from "../models/cargo.js";
+import { Pessoa } from "./pessoa/pessoa.js";
 
 //Classe funcionario que herda de pessoa
 export class Funcionario extends Pessoa implements IUsuario {

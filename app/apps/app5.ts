@@ -1,8 +1,8 @@
-import { Cliente } from "../models/class/cliente.js";
-import { Endereco } from "../models/endereco.js";
-import { ContaPoupanca } from "../models/class/contapoupanca.js";
-import { Credito } from "../models/credito.js";
-import { Debito } from "../models/debito.js";
+import { Cliente } from "../models/cliente";
+import { Endereco } from "../models/pessoa/endereco";
+import { ContaPoupanca } from "../models/contapoupanca";
+import { Credito } from "../models/conta/credito";
+import { Debito } from "../models/conta/debito";
 
 export function app5() {
     const clientePoupanca = new Cliente(
@@ -19,7 +19,7 @@ export function app5() {
             "Amapá"
         )
     );
-    clientePoupanca.contaPoupanca = new ContaPoupanca("002", "111", 0.01);
+    /* clientePoupanca.contaPoupanca = new ContaPoupanca("002", "111", 0.01);
 
     //Depósitos na conta poupança
     clientePoupanca.contaPoupanca.depositar(
@@ -76,5 +76,5 @@ export function app5() {
             " Seu saldo é de R$: " +
             clientePoupanca.contaPoupanca.calcularSaldo() +
             clientePoupanca.contaPoupanca.rendimentoConta()
-    );
+    ); */
 }

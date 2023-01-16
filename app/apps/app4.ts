@@ -1,8 +1,8 @@
-import { ContaCorrente } from "../models/class/contacorrente.js";
-import { Credito } from "../models/credito.js";
-import { Endereco } from "../models/endereco.js";
-import { Cliente } from "../models/class/cliente.js";
-import { ContaPoupanca } from "../models/class/contapoupanca.js";
+import { ContaCorrente } from "../models/contacorrente";
+import { Credito } from "../models/conta/credito";
+import { Endereco } from "../models/pessoa/endereco.js";
+import { Cliente } from "../models/cliente";
+import { ContaPoupanca } from "../models/contapoupanca";
 
 export function app4() {
     const clienteCorrente = new Cliente(
@@ -20,7 +20,7 @@ export function app4() {
         )
     );
 
-    clienteCorrente.contaCorrente = new ContaCorrente("001", "222", 500);
+    /*     clienteCorrente.contaCorrente = new ContaCorrente("001", "222", 500);
     clienteCorrente.contaCorrente.depositar(new Credito(1000, new Date()));
 
     const clientePoupanca = new Cliente(
@@ -74,5 +74,5 @@ export function app4() {
             clientePoupanca.nome +
             " Seu saldo é de R$: " +
             clientePoupanca.contaPoupanca.calcularSaldo()
-    );
+    ); */
 }

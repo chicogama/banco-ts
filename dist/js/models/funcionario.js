@@ -1,4 +1,4 @@
-import { Pessoa } from "../pessoa.js";
+import { Pessoa } from "./pessoa/pessoa.js";
 //Classe funcionario que herda de pessoa
 export class Funcionario extends Pessoa {
     constructor(cpf, nome, telefone, cargo, salario) {

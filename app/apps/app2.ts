@@ -1,6 +1,6 @@
-import { Cliente } from "../models/class/cliente.js";
-import { ContaCorrente } from "../models/class/contacorrente.js";
-import { Endereco } from "../models/endereco.js";
+import { Cliente } from "../models/cliente";
+import { ContaCorrente } from "../models/contacorrente";
+import { Endereco } from "../models/pessoa/endereco.js";
 
 export function app2() {
     const cliente = new Cliente(

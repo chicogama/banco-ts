@@ -1,5 +1,5 @@
 import { Cargo } from "../models/cargo.js";
-import { Funcionario } from "../models/class/funcionario.js";
+import { Funcionario } from "../models/funcionario.js";
 
 export function app1() {
     const chico = new Funcionario(

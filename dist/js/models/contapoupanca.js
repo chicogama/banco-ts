@@ -1,5 +1,5 @@
 //classe que implementa conta Poupança, herda da classe conta
-import { Conta } from "../conta.js";
+import { Conta } from "./conta/conta.js";
 export class ContaPoupanca extends Conta {
     constructor(agencia, numero, rentabilidade) {
         super(agencia, numero);

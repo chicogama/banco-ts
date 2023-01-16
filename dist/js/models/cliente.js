@@ -1,4 +1,4 @@
-import { Pessoa } from "../pessoa.js";
+import { Pessoa } from "./pessoa/pessoa.js";
 //Classe Cliente que herda de Pessoa
 export class Cliente extends Pessoa {
     constructor(cpf, nome, telefone, vip, endereco) {

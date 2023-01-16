@@ -1,15 +1,13 @@
-import { IUsuario } from "../IUsuario.js";
-import { Endereco } from "../endereco.js";
-import { Pessoa } from "../pessoa.js";
-import { ContaCorrente } from "./contacorrente.js";
-import { ContaPoupanca } from "./contapoupanca";
+import { IUsuario } from "./pessoa/IUsuario";
+import { Endereco } from "../models/pessoa/endereco";
+import { Pessoa } from "./pessoa/pessoa.js";
+import { Conta } from "./conta/conta";
 
 //Classe Cliente que herda de Pessoa
 export class Cliente extends Pessoa implements IUsuario {
     private _endereco: Array<Endereco>;
     private _vip: Boolean;
-    public contaCorrente: ContaCorrente;
-    public contaPoupanca: ContaPoupanca;
+    public conta: Array<Conta>;
 
     constructor(
         cpf: string,
